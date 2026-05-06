@@ -44,9 +44,9 @@ G.z = [1, 1, 2, -1, -1];
 G.D = [1.33e6; 1.96e6; 0.71e6; 2.03e6; 0.86e6]; % nm^2/ms
 G.kappa_cleft = [2.56; 2.56; 2.56; 2.56; 2.56];
 G.D_func = @diffusion_coefficient;
-G.c0e = [100; 4; 1.4; 106.8; 0]; % mM
+G.c0e = [100; 4; 1.4; 106.8; 0];        % mM
 G.c0i = [12; 125; 0.0001; 137.0002; 0]; % mM
-G.c0v = [145; 5; 0; 0; 150]; % mM 
+G.c0v = [145; 5; 0; 0; 150];            % mM 
 G.rho0 = zeros(G.N, 1);
 G.initial_conditions = @initial_conditions;
 
@@ -59,14 +59,14 @@ G.eps_mem = G.eps_m*G.eps_0;
 G.eps_channel = G.eps_r*G.eps_0;
 G.eps_func = @permittivity;
 
-G.e = 1.60217662e-19; % C
+G.e = 1.60217662e-19;  % C
 G.kB = 1.38064852e-20; % mJ/K
-G.T = 310; % K (300)
-G.NA = 6.02214076e20; % mmol^{-1}
-G.F = 96485.3365; % C/mol
+G.T = 310;             % K 
+G.NA = 6.02214076e20;  % mmol^{-1}
+G.F = 96485.3365;      % C/mol
 
 % Holding potential
-G.V_hold = -70;
+G.V_hold = -70;        % mV
 
 % Open vesicle
 G.open_vesicle = 1;
